@@ -4,6 +4,7 @@ const http = require("http");
 const postgres = require("postgres");
 
 const sql = postgres({ db: "mydb", user: "user", password: "password" });
+
 // Define the service implementation
 const service = {
   ProductsService: {
@@ -23,10 +24,10 @@ const service = {
         }
 
         const product = await sql`
-              INSERT INTO products (name, about, price)
-              VALUES (${name}, ${about}, ${price})
-              RETURNING *
-              `;
+          INSERT INTO products (name, about, price)
+          VALUES (${name}, ${about}, ${price})
+          RETURNING *
+          `;
 
         // Will return only one element.
         callback(product[0]);

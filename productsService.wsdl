@@ -51,7 +51,7 @@
           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </input>
       <output>
-        <soap:body use="encoded" namespace="http://localhost:8000/products"
+        <soap:body use="encoded" namespace="http://localhost:8000/pro ducts"
           encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
       </output>
     </operation>
